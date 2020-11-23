@@ -36,11 +36,11 @@ public class CardatabaseApplication {
 	CommandLineRunner run() {
 		return (args) ->{
 			logger.info("Debut CallBack ...");
-			Owner fares = new Owner("FERCHICHI", "Fares");
+			Owner fares = new Owner("USER1", "USER1");
 			ownerRep.save(fares);
 			carRep.save(new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, fares));
 			carRep.save(new Car("Pego", "306", "Black", "ADF-1122", 2017, 60000, fares));
-			carRep.save(new Car("Nissan", "Leaf", "white", "SSJ-3002", 2014, 29000, ownerRep.save(new Owner("MESOUDI", "Rayen"))));
+			carRep.save(new Car("Nissan", "Leaf", "white", "SSJ-3002", 2014, 29000, ownerRep.save(new Owner("USER2", "USER2"))));
 			logger.info("Fin CallBack ...");
 		};
 	}
