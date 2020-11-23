@@ -27,7 +27,7 @@ public class CardatabaseApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
-		logger.info("SpringApplication Is Started ...");	
+		logger.info("SpringApplication is Started ...");	
 		
 	}
 	
