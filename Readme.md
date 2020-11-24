@@ -9,5 +9,7 @@
 
 ``$ mysql --host 127.0.0.1 -P 3306 --user root -pPassword123!``
 
+``$ create database cardb``
+
 
 
