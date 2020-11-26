@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.packt.cardatabase.domain.Car;
 import com.packt.cardatabase.domain.CarRepository;
@@ -16,6 +18,7 @@ import com.packt.cardatabase.domain.OwnerRepository;
 import com.packt.cardatabase.domain.User;
 import com.packt.cardatabase.domain.UserRepository;
 
+@Controller
 @SpringBootApplication
 public class CardatabaseApplication {
 
@@ -35,6 +38,11 @@ public class CardatabaseApplication {
 		SpringApplication.run(CardatabaseApplication.class, args);
 		logger.info("cardatabase Application is Started ...");	
 		
+	}
+	
+	@RequestMapping(value = "/login")
+	String getPage() {
+		return "index";
 	}
 	
 	@Bean
